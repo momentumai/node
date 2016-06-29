@@ -1,12 +1,9 @@
 dispatch:
-  - url: "*/node-api/*"
+  - url: "*/api/*"
     module: node-api
 
-  - url: "*/node-worker/*"
+  - url: "*/worker/*"
     module: node-worker
-
-  - url: "*/python-worker/*"
-    module: python-worker
 
   - url: "momentum-ai.appspot.com/"
     module: default

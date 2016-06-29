@@ -1,0 +1,37 @@
+swagger: '2.0'
+info:
+  title: Momentum
+  version: '1.0.0'
+basePath: /worker
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+
+  # test
+  /test:
+    post:
+      x-swagger-router-controller: "test"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/Test"
+
+definitions:
+
+  # global
+  Test:
+    properties:
+      session_id:
+        type: string
+    required:
+      - session_id
+

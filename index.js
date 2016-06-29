@@ -1,33 +1,78 @@
-var path = require('path'),
+var Promise = require('bluebird'),
     Runner = require('swagger-node-runner'),
     express = require('express'),
     morgan = require('morgan'),
     app = express(),
-    transformToExpress = require('./web/transform'),
-    config = {
-        'appRoot': path.join(
-            __dirname,
-            'web'
-        )
-    };
+    lambdaToExpress = require('./lambda_to_express'),
+    PROJECTS = ['api', 'worker'];
 
-function normalizePort(val) {
-  var port = parseInt(val, 10);
+function loadProjects (projects) {
+    var promises = {};
 
-  if (isNaN(port)) {
-    // named pipe
-    return val;
-  }
+    function getRunner (config) {
+        return new Promise(function (resolve) {
+            Runner.create(config, function (err, runner) {
+                if (err) {
+                    throw err;
+                }
+                resolve(runner);
+            });
+        });
+    }
 
-  if (port >= 0) {
-    // port number
-    return port;
-  }
+    projects.forEach(function (project) {
+        promises[project] = lambdaToExpress(project).then(function () {
+            return getRunner({
+                'appRoot': __dirname,
+                'swagger': project + '/swagger/swagger.yaml',
+                'swaggerControllerPipe': 'swagger_controllers',
+                'bagpipes': {
+                    '_router': {
+                        'name': 'swagger_router',
+                        'mockControllersDirs': [project + '/mocks'],
+                        'controllersDirs': [project + '/controllers']
+                    },
+                    '_swagger_validate': {
+                        'name': 'swagger_validator',
+                        'validateReponse': true
+                    },
+                    'swagger_controllers': [
+                        'swagger_params_parser',
+                        '_swagger_validate',
+                        '_router'
+                    ]
+                }
+            });
+        });
+    });
 
-  return false;
+    return Promise.props(promises);
+}
+
+process.env['SUPPRESS_NO_CONFIG_WARNING'] = 1;
+
+if (process.env['NODE_ENV'] !== 'production') {
+    require('longjohn');
+}
+
+function normalizePort (val) {
+    var port = parseInt(val);
+
+    if (isNaN(port)) {
+        // named pipe
+        return val;
+    }
+
+    if (port >= 0) {
+        // port number
+        return port;
+    }
+
+    return false;
 }
 
 app.use(morgan('combined'));
+
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header(
@@ -46,24 +91,21 @@ app.use(function (req, res, next) {
     next();
 });
 
-transformToExpress(function () {
-    Runner.create(config, function (err, runner) {
-        if (err) {
-            throw err;
-        }
+// eslint-disable-next-line no-unused-vars
+function errorHandler (err, req, res, next) {
+    if (err.statusCode === 400) {
+        return res.sendStatus(400);
+    }
+    console.error(err);
+    return res.sendStatus(500);
+}
 
-        runner.expressMiddleware().register(app);
-
-        // eslint-disable-next-line no-unused-vars
-        app.use(function (err, req, res, next) {
-            if (err instanceof SyntaxError || err.statusCode === 400) {
-                return res.sendStatus(400);
-            }
-            return res.sendStatus(500);
-        });
-
-        app.listen(normalizePort(process.env.PORT || 8081));
+loadProjects(PROJECTS).then(function (runners) {
+    Object.keys(runners).forEach(function (project) {
+        runners[project].expressMiddleware().register(app);
     });
+    app.use(errorHandler);
+    app.listen(normalizePort(process.env.PORT || 8081));
 });
 
 module.exports = app;

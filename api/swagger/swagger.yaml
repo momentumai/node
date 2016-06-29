@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   title: Momentum
   version: '1.0.0'
-basePath: /frontend-api
+basePath: /api
 schemes:
   - https
 consumes:
