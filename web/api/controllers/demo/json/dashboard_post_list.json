@@ -1,0 +1,126 @@
+{
+	"data": [{
+		"id": 1,
+		"url": "www.momentum.ai",
+		"momentum": 0.6415813885181749,
+		"recommended": 1,
+		"promoted": 0,
+		"pageviews": [3297, 1703, 797, 487, 265, 141, 118, 119, 169, 319, 454, 521, 1185, 2176, 626, 817, 1680, 1894, 1400, 2445, 2547, 2948, 3442, 4207, 5012],
+		"title": "Ten of the worst tackles in MLS history, from kick-outs to headbutts",
+		"img": "http://images.cdn.fourfourtwo.com/sites/fourfourtwo.com/files/160405_tackle_bob_frid-usa_today_sports.jpg"
+	}, {
+		"id": 2,
+		"url": "www.momentum.ai",
+		"momentum": 0.3711129351797042,
+		"recommended": 0,
+		"pageviews": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1680, 1050],
+		"title": "Vote! Who should win the Football League's Goal of the Year?",
+		"img": "http://images.cdn.fourfourtwo.com/sites/fourfourtwo.com/files/yiipun.jpg"
+	}, {
+		"id": 3,
+		"url": "www.momentum.ai",
+		"momentum": 0.35956903778580527,
+		"recommended": 0,
+		"pageviews": [5456, 4528, 2603, 1757, 1058, 724, 895, 955, 1798, 3898, 4528, 4222, 4323, 3863, 5508, 4720, 4147, 3736, 3026, 2923, 2683, 3088, 2734, 2885, 3344],
+		"title": "Play like Real Madrid: Counter-attack",
+		"img": "http://images.cdn.fourfourtwo.com/sites/fourfourtwo.com/files/5_pemain_afrika_terbaik_di_indonesia.jpg"
+	}, {
+		"id": 4,
+		"url": "www.momentum.ai",
+		"momentum": 0.3311929244565874,
+		"recommended": 0,
+		"pageviews": [30, 15, 29, 17, 13, 16, 2, 6, 3, 5, 13, 23, 1586, 4637, 2284, 2869, 3056, 3477, 2461, 2601, 2559, 2551, 2460, 2646, 3173],
+		"title": "Best Arsenal players: the 11 greatest ever",
+		"img": "http://images.cdn.fourfourtwo.com/sites/fourfourtwo.com/files/12417898_1109200782434683_6557904170704092615_n.jpg"
+	}, {
+		"id": 5,
+		"url": "www.momentum.ai",
+		"momentum": 0.31552014308759914,
+		"recommended": 0,
+		"pageviews": [14, 6, 5, 0, 0, 1, 1, 0, 3, 4, 2, 4, 940, 3665, 2027, 2093, 2401, 3138, 2184, 1799, 2084, 2668, 2340, 2512, 2414],
+		"title": "Keep on running",
+		"img": "http://images.cdn.fourfourtwo.com/sites/fourfourtwo.com/files/pa-8058555_0.jpg"
+	}, {
+		"id": 6,
+		"url": "www.momentum.ai",
+		"momentum": 0.2920524082257352,
+		"recommended": 0,
+		"pageviews": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 874, 2812, 2784, 3389, 2415, 2220, 2011],
+		"promoted": 0,
+		"title": "Where are they now? Barcelona's Champions League-winning 2005/06 team",
+		"img": "http://images.cdn.fourfourtwo.com/sites/fourfourtwo.com/files/img_6928.jpg"
+	}, {
+		"id": 7,
+		"url": "www.momentum.ai",
+		"momentum": 0.15408312199961444,
+		"recommended": 0,
+		"pageviews": [5, 2, 3, 3, 2, 0, 2, 2, 1, 1, 6, 7, 13, 28, 373, 215, 142, 92, 99, 88, 132, 225, 210, 212, 279],
+		"title": "S.League should think smaller, not bigger",
+		"img": "http://images.cdn.fourfourtwo.com/sites/fourfourtwo.com/files/img_2839.jpg"
+	}, {
+		"id": 8,
+		"url": "www.momentum.ai",
+		"momentum": 0.1408745240109937,
+		"recommended": 0,
+		"pageviews": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 832, 562, 428, 282],
+		"title": "S.League should think smaller, not bigger",
+		"img": "http://images.cdn.fourfourtwo.com/sites/fourfourtwo.com/files/img_2839.jpg"
+	}, {
+		"id": 9,
+		"url": "www.momentum.ai",
+		"momentum": 0.13172035874268814,
+		"recommended": 0,
+		"pageviews": [2053, 1768, 1026, 848, 484, 391, 426, 312, 289, 870, 1664, 1853, 2050, 1777, 1751, 1381, 1274, 979, 1016, 934, 897, 796, 1085, 939, 1156],
+		"title": "The Week in Manchester United: Van Gaal's decision-making hits new low",
+		"img": "http://images.cdn.fourfourtwo.com/sites/fourfourtwo.com/files/taayyaak_0.jpg"
+	}, {
+		"id": 10,
+		"url": "www.momentum.ai",
+		"momentum": 0.0996807803036187,
+		"recommended": 0,
+		"pageviews": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 466, 402, 292, 283, 249],
+		"title": "Thailand handed horror draw in World Cup bid",
+		"img": "http://images.cdn.fourfourtwo.com/sites/fourfourtwo.com/files/12988106_1024372010943788_736097601_n_0.jpg"
+	}, {
+		"id": 11,
+		"url": "www.momentum.ai",
+		"momentum": 0.08666030967857896,
+		"recommended": 0,
+		"pageviews": [436, 333, 259, 156, 118, 111, 130, 78, 71, 60, 42, 52, 50, 38, 54, 47, 70, 80, 60, 267, 237, 197, 192, 153, 115],
+		"title": "Michael Cox: How Alex Iwobi is shining a light in dim days for Arsenal",
+		"img": "http://images.cdn.fourfourtwo.com/sites/fourfourtwo.com/files/iwobi_west_ham_2.jpg"
+	}, {
+		"id": 12,
+		"url": "www.momentum.ai",
+		"momentum": 0.0667398564948871,
+		"recommended": 0,
+		"pageviews": [0, 0, 20, 145, 153, 80, 62, 92, 123, 60, 44, 45, 48, 26, 23, 32, 37, 41, 44, 156, 154, 172, 108, 108, 105],
+		"title": "Bruno Henrique: Real Madrid's unknown nemesis who's no receptionist anymore ",
+		"img": "http://images.cdn.fourfourtwo.com/sites/fourfourtwo.com/files/bruno_henrique.jpg"
+	}, {
+		"id": 13,
+		"url": "www.momentum.ai",
+		"momentum": 0.04396649703120743,
+		"recommended": 0,
+		"pageviews": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 1, 0, 0, 214, 206, 126, 123, 85, 69, 68, 55],
+		"title": "Behind enemy lines at Schalke: When our Dortmund fan went to Gelsenkirchen",
+		"img": "http://images.cdn.fourfourtwo.com/sites/fourfourtwo.com/files/dortmund_schalke_0.jpg"
+	}, {
+		"id": 14,
+		"url": "www.momentum.ai",
+		"momentum": 0.04138023249995993,
+		"recommended": 0,
+		"pageviews": [9, 3, 2, 4, 3, 1, 3, 2, 2, 2, 3, 2, 1, 0, 0, 0, 0, 1, 0, 2, 2, 2, 0, 31, 45],
+		"title": "Sigurdsson: Guidolin deserves Swansea job",
+		"img": "http://images.cdn.fourfourtwo.com/sites/fourfourtwo.com/files/gylfisigurdsson-cropped_1ei0litdm15vq11em4bh9m3cw3.jpg"
+	}, {
+		"id": 15,
+		"url": "www.momentum.ai",
+		"momentum": 0.03372285902965872,
+		"recommended": 0,
+		"pageviews": [28, 1, 7, 4, 9, 24, 10, 184, 70, 9, 31, 18, 13, 14, 52, 65, 27, 40, 44, 28, 32, 52, 110, 115, 381],
+		"title": "Get match-winning power",
+		"img": "http://images.cdn.fourfourtwo.com/sites/fourfourtwo.com/files/160405_tackle_bob_frid-usa_today_sports.jpg"
+	}],
+	"interval": 3600
+}

@@ -1,0 +1,3 @@
+service: node-api
+runtime: nodejs
+vm: true

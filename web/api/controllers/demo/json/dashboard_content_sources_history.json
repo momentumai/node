@@ -1,0 +1,40 @@
+{
+	"organic": {
+		"sources": {
+			"reddit.com": {
+				"seed": 13441,
+				"viral": 823
+			},
+			"private": {
+				"seed": 8242,
+				"viral": 1975
+			},
+			"twitter.co": {
+				"seed": 273,
+				"viral": 475
+			}
+		},
+		"seed": 21956,
+		"viral": 3273
+	},
+	"team": {
+		"sources": {
+			"twitter.co": {
+				"seed": 673,
+				"viral": 975
+			}
+		},
+		"seed": 673,
+		"viral": 975
+	},
+	"paid": {
+		"sources": {
+			"facebook.com": {
+				"seed": 773,
+				"viral": 475
+			}
+		},
+		"seed": 773,
+		"viral": 475
+	}
+}

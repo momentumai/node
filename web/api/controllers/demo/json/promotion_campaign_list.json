@@ -1,0 +1,41 @@
+{
+	"data": [{
+		"id": 1,
+		"cId": 1,
+		"seed": 30,
+		"viral": 0,
+		"created_at": 1460455270,
+		"active": false,
+		"name": "#1 AUTO Ten of the worst tackles in MLS history, from kick-outs to headbutts...",
+		"from": 1460455291,
+		"to": 1460628060,
+		"conversion": 30,
+		"click": 27,
+		"landing": 1.1111111111111112,
+		"lift": 1,
+		"cpa": 0.13066666666666665,
+		"spent": 0,
+		"spend": 3.92
+	}, {
+		"id": 2,
+		"cId": 1,
+		"seed": 233,
+		"viral": 0,
+		"created_at": 1460375017,
+		"active": false,
+		"name": "#1 MANUAL Vote! Who should win the Football League's Goal of the Year?",
+		"from": 1460375044,
+		"to": 1460461440,
+		"conversion": 233,
+		"click": 288,
+		"landing": 0.8090277777777778,
+		"lift": 1,
+		"cpa": 0.12832618025751072,
+		"spent": 0,
+		"spend": 29.9
+	}],
+	"cnt": 2,
+	"sum": 2,
+	"offset": 0,
+	"currency": "GBP"
+}

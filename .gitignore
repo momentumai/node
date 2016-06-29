@@ -1,0 +1,4 @@
+node_modules/*
+!node_modules/@*
+node_modules/@config/prod.config.json
+*.bak.json
