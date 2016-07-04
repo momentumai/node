@@ -1,12 +1,11 @@
 var logger = require('@lib/logger')('dashboard/content/info'),
     dashboardHandler = require('@lib/web/dashboard/session'),
-    contentPublicInfoModel = require('@lib/model/content/public-info');
+    model = require('@lib/model/filter');
 
 function handler (event, context) {
     dashboardHandler(event, context, logger, function (local) {
-        return contentPublicInfoModel.get(
-            local.session.team_id,
-            event.url
+        return model.list(
+            local.session.team_id
         );
     });
 }
