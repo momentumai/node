@@ -106,6 +106,7 @@ loadProjects(PROJECTS).then(function (runners) {
     });
     app.use(errorHandler);
     app.listen(normalizePort(process.env.PORT || 8081));
+    console.log('Running on: ', normalizePort(process.env.PORT || 8081));
 });
 
 module.exports = app;

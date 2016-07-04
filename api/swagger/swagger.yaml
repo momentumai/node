@@ -98,6 +98,18 @@ paths:
           required: true
           schema:
             $ref: "#/definitions/ContentBase"
+  /dashboard/content/temp:
+    post:
+      x-swagger-router-controller: "dashboard/content/temp"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/PostGet"
   /dashboard/content/blacklist:
     post:
       x-swagger-router-controller: "dashboard/content/blacklist"
