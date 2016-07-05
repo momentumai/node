@@ -53,6 +53,8 @@ process.env['SUPPRESS_NO_CONFIG_WARNING'] = 1;
 
 if (process.env['NODE_ENV'] !== 'production') {
     require('longjohn');
+} else {
+    app.use(morgan('combined'));
 }
 
 function normalizePort (val) {
@@ -70,8 +72,6 @@ function normalizePort (val) {
 
     return false;
 }
-
-app.use(morgan('combined'));
 
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');

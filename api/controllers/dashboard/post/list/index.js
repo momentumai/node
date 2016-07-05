@@ -1,16 +1,13 @@
 var logger = require('@lib/logger')('dashboard/post/list'),
     dashboardHandler = require('@lib/web/dashboard/interval/filter'),
-    contentModel = require('@lib/model/content');
+    toplist = require('@lib/model/toplist');
 
 function handler (event, context) {
-    dashboardHandler(event, context, logger, function (local, pool) {
-        return contentModel.list(
+    dashboardHandler(event, context, logger, function (local) {
+        return toplist.get(
             local.session.team_id,
-            local.now,
-            local.interval,
-            event.limit,
             local.cats,
-            pool
+            local.now
         );
     });
 }
