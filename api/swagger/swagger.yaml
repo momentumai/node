@@ -85,7 +85,7 @@ paths:
           name: body
           required: true
           schema:
-            $ref: "#/definitions/CategoryList"
+            $ref: "#/definitions/SessionId"
   /dashboard/content/info:
     post:
       x-swagger-router-controller: "dashboard/content/info"
@@ -797,14 +797,6 @@ definitions:
       - url
 
   # dashboard
-  CategoryList:
-    properties:
-      session_id:
-        type: string
-      parent:
-        type: integer
-    required:
-      - session_id
   PostGet:
     properties:
       session_id:
