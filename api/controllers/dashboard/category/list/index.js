@@ -1,13 +1,11 @@
 var logger = require('@lib/logger')('dashboard/category/list'),
     dashboardHandler = require('@lib/web/dashboard/session'),
-    categoryModel = require('@lib/model/category');
+    filterModel = require('@lib/model/filter');
 
 function handler (event, context) {
-    dashboardHandler(event, context, logger, function (local, pool) {
-        return categoryModel.list(
-            local.session.team_id,
-            event.parent,
-            pool
+    dashboardHandler(event, context, logger, function (local) {
+        return filterModel.list(
+            local.session.team_id
         );
     });
 }

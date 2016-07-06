@@ -801,8 +801,6 @@ definitions:
     properties:
       session_id:
         type: string
-      parent:
-        type: integer
     required:
       - session_id
   PostGet:
