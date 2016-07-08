@@ -1,5 +1,5 @@
 var logger = require('@lib/logger')('dashboard/main'),
-    dashboardHandler = require('@lib/web/dashboard/session/filter'),
+    dashboardHandler = require('@lib/web/dashboard/filter'),
     statsModel = require('@lib/model/page/stats');
 
 function handler (event, context) {

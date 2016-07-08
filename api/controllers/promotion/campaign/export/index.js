@@ -1,6 +1,6 @@
 var logger = require('@lib/logger')('promotion/campaign/export'),
     dashboardHandler = require(
-        '@lib/web/dashboard/session/facebook'
+        '@lib/web/dashboard/filter/facebook'
     ),
     promotionModel = require('@lib/model/promotion/campaign');
 

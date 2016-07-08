@@ -26,30 +26,6 @@ paths:
             $ref: "#/definitions/Demo"
 
   # dashboard
-  /dashboard/post/get:
-    post:
-      x-swagger-router-controller: "dashboard/post/get"
-      responses:
-        200:
-          description: successful response
-      parameters:
-        - in: body
-          name: body
-          required: true
-          schema:
-            $ref: "#/definitions/PostGet"
-  /dashboard/post/recommended/list:
-    post:
-      x-swagger-router-controller: "dashboard/post/recommended/list"
-      responses:
-        200:
-          description: successful response
-      parameters:
-        - in: body
-          name: body
-          required: true
-          schema:
-            $ref: "#/definitions/PostList"
   /dashboard/post/list:
     post:
       x-swagger-router-controller: "dashboard/post/list"
@@ -86,30 +62,6 @@ paths:
           required: true
           schema:
             $ref: "#/definitions/SessionId"
-  /dashboard/content/info:
-    post:
-      x-swagger-router-controller: "dashboard/content/info"
-      responses:
-        200:
-          description: successful response
-      parameters:
-        - in: body
-          name: body
-          required: true
-          schema:
-            $ref: "#/definitions/ContentBase"
-  /dashboard/content/temp:
-    post:
-      x-swagger-router-controller: "dashboard/content/temp"
-      responses:
-        200:
-          description: successful response
-      parameters:
-        - in: body
-          name: body
-          required: true
-          schema:
-            $ref: "#/definitions/PostGet"
   /dashboard/content/blacklist:
     post:
       x-swagger-router-controller: "dashboard/content/blacklist"
@@ -122,30 +74,6 @@ paths:
           required: true
           schema:
             $ref: "#/definitions/ContentBlacklist"
-  /dashboard/content/stats:
-    post:
-      x-swagger-router-controller: "dashboard/content/stats"
-      responses:
-        200:
-          description: successful response
-      parameters:
-        - in: body
-          name: body
-          required: true
-          schema:
-            $ref: "#/definitions/ContentBase"
-  /dashboard/content/sources:
-    post:
-      x-swagger-router-controller: "dashboard/content/sources"
-      responses:
-        200:
-          description: successful response
-      parameters:
-        - in: body
-          name: body
-          required: true
-          schema:
-            $ref: "#/definitions/ContentBase"
   /dashboard/content/sources/history:
     post:
       x-swagger-router-controller: "dashboard/content/sources/history"
@@ -610,18 +538,6 @@ paths:
           required: true
           schema:
             $ref: "#/definitions/ContentBase"
-  /promotion/ogdata:
-    post:
-      x-swagger-router-controller: "promotion/ogdata"
-      responses:
-        200:
-          description: successful response
-      parameters:
-        - in: body
-          name: body
-          required: true
-          schema:
-            $ref: "#/definitions/ContentBase"
   /promotion/create:
     post:
       x-swagger-router-controller: "promotion/create"
@@ -804,15 +720,6 @@ definitions:
       - url
 
   # dashboard
-  PostGet:
-    properties:
-      session_id:
-        type: string
-      url:
-        type: string
-    required:
-      - session_id
-      - url
   PostList:
     properties:
       session_id:

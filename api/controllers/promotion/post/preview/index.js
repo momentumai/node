@@ -1,5 +1,5 @@
 var logger = require('@lib/logger')('promotion/post/preview'),
-    dashboardHandler = require('@lib/web/dashboard/session/facebook'),
+    dashboardHandler = require('@lib/web/dashboard/filter/facebook'),
     postModel = require('@lib/model/promotion/post');
 
 function handler (event, context) {

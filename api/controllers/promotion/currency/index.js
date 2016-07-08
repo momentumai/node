@@ -1,5 +1,5 @@
 var logger = require('@lib/logger')('promotion/currency'),
-    dashboardHandler = require('@lib/web/dashboard/session/facebook'),
+    dashboardHandler = require('@lib/web/dashboard/filter/facebook'),
     currencyModel = require('@lib/model/promotion/currency');
 
 function handler (event, context) {

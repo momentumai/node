@@ -1,5 +1,5 @@
 var logger = require('@lib/logger')('alert/list'),
-    dashboardHandler = require('@lib/web/dashboard/cats'),
+    dashboardHandler = require('@lib/web/dashboard/filter'),
     alertModel = require('@lib/model/alert');
 
 function handler (event, context) {

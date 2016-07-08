@@ -1,5 +1,5 @@
 var logger = require('@lib/logger')('/facebook/query/asset/list'),
-    dashboardHandler = require('@lib/web/dashboard/session/facebook'),
+    dashboardHandler = require('@lib/web/dashboard/filter/facebook'),
     assetModel = require('@lib/model/fb-asset');
 
 function handler (event, context) {

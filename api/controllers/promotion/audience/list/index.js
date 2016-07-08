@@ -1,5 +1,5 @@
 var logger = require('@lib/logger')('promotion/audience/list'),
-    dashboardHandler = require('@lib/web/dashboard/session/facebook'),
+    dashboardHandler = require('@lib/web/dashboard/filter/facebook'),
     auidenceModel = require('@lib/model/promotion/audience');
 
 function handler (event, context) {

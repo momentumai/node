@@ -1,5 +1,5 @@
 var logger = require('@lib/logger')('promotion/autoschedule'),
-    dashboardHandler = require('@lib/web/dashboard/cats'),
+    dashboardHandler = require('@lib/web/dashboard/filter'),
     promotionModel = require('@lib/model/promotion');
 
 function handler (event, context) {
