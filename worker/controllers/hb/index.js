@@ -1,7 +1,5 @@
 function handler (event, context) {
-    context.succeed({
-        'hello': 'world'
-    });
+    context.succeed({});
 }
 
 module.exports.handler = handler;

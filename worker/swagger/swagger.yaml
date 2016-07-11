@@ -12,26 +12,15 @@ produces:
 paths:
 
   # test
-  /test:
+  /hb:
     post:
-      x-swagger-router-controller: "test"
+      x-swagger-router-controller: "hb"
       responses:
         200:
           description: successful response
-      parameters:
-        - in: body
-          name: body
-          required: true
-          schema:
-            $ref: "#/definitions/Test"
-
-definitions:
-
-  # global
-  Test:
-    properties:
-      session_id:
-        type: string
-    required:
-      - session_id
-
+  /rules:
+    post:
+      x-swagger-router-controller: "rules"
+      responses:
+        200:
+          description: successful response

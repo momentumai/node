@@ -13,6 +13,7 @@ DROP TABLE source;
 /* content_id migration */
 ALTER TABLE campaign MODIFY content_id VARCHAR(128);
 ALTER TABLE promotion MODIFY content_id VARCHAR(128);
+ALTER TABLE alert MODIFY content_id VARCHAR(128);
 
 /* category migrate */
 
