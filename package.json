@@ -10,6 +10,7 @@
   "author": "",
   "license": "",
   "dependencies": {
+    "@google/cloud-trace": "^0.5.4",
     "append-query": "1.1.0",
     "aws-sdk": "2.2.43",
     "bcrypt": "0.8.5",

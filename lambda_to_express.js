@@ -62,12 +62,13 @@ module.exports = function (basePath) {
                                 msg = err && err.toString() || '';
                                 code = Number(msg.split(':')[1]);
 
-                                if (code === 401) {
+                                if (code >= 400 && code < 500) {
                                     res.json({
                                         'errorMessage': msg
                                     });
                                 } else {
                                     res.status(code || 500);
+                                    res.end();
                                 }
                             }
                         });

@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV === 'production') {
+    require('@google/cloud-trace').start();
+}
+
 var Promise = require('bluebird'),
     Runner = require('swagger-node-runner'),
     express = require('express'),
