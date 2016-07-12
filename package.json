@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "4.3.2"
+  },
   "scripts": {
     "test": "eslint .",
     "start": "node $NODE_DEBUG_OPTION index.js"
