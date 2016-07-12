@@ -51,16 +51,24 @@ module.exports = function (basePath) {
                                 }
                             },
                             'succeed': function (result) {
-                                /* for testing */
-                                /*if (Math.floor(Math.random() * 3) === 2) {
-                                    res.status(500);
-                                }*/
                                 res.json(result);
                             },
                             'fail': function (err) {
-                                res.json({
-                                    'errorMessage': err && err.toString()
-                                });
+                                var msg,
+                                    code;
+
+                                console.error(err.stack || err);
+
+                                msg = err && err.toString() || '';
+                                code = Number(msg.split(':')[1]);
+
+                                if (code === 401) {
+                                    res.json({
+                                        'errorMessage': msg
+                                    });
+                                } else {
+                                    res.status(code || 500);
+                                }
                             }
                         });
                     };
