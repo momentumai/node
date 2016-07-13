@@ -26,6 +26,18 @@ paths:
             $ref: "#/definitions/Demo"
 
   # dashboard
+  /dashboard/post/url:
+    post:
+      x-swagger-router-controller: "dashboard/post/url"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/PostUrl"
   /dashboard/post/list:
     post:
       x-swagger-router-controller: "dashboard/post/list"
@@ -720,6 +732,15 @@ definitions:
       - url
 
   # dashboard
+  PostUrl:
+    properties:
+      session_id:
+        type: string
+      url:
+        type: string
+    required:
+      - session_id
+      - url
   PostList:
     properties:
       session_id:
