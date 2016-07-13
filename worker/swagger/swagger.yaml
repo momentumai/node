@@ -12,19 +12,19 @@ produces:
 paths:
 
   /hb:
-    post:
+    get:
       x-swagger-router-controller: "hb"
       responses:
         200:
           description: successful response
   /rules:
-    post:
+    get:
       x-swagger-router-controller: "rules"
       responses:
         200:
           description: successful response
   /crawler:
-    post:
+    get:
       x-swagger-router-controller: "crawler"
       responses:
         200:

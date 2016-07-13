@@ -33,11 +33,12 @@ module.exports = function (basePath) {
             }
 
             fileList.forEach(function (file) {
-                var module;
+                var module,
+                    router;
 
                 if (file) {
                     module = require(file);
-                    module.post = module.options = function router (req, res) {
+                    router = function (req, res) {
                         var params = parseParams(req.swagger.params);
 
                         module.handler(params, {
@@ -73,6 +74,9 @@ module.exports = function (basePath) {
                             }
                         });
                     };
+                    module.get = router;
+                    module.post = router;
+                    module.options = router;
                 }
             });
             resolve();
