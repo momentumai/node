@@ -7,3 +7,6 @@ beta_settings:
 
 skip_files:
   - ^.*node_modules/[^@].*$
+
+env_variables:
+  BLUEBIRD_DEBUG: '1'
