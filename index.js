@@ -2,6 +2,7 @@ if (process.env.NODE_ENV === 'production') {
     require('@google/cloud-trace').start();
 }
 
+// eslint-disable-next-line vars-on-top
 var Promise = require('bluebird'),
     Runner = require('swagger-node-runner'),
     express = require('express'),
