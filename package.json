@@ -19,7 +19,6 @@
     "bcrypt": "0.8.5",
     "bignum": "0.11.0",
     "bluebird": "3.0.5",
-    "cheerio": "0.20.0",
     "currency-symbol-map": "3.0.0",
     "debug": "2.2.0",
     "express": "4.14.0",
