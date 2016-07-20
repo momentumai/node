@@ -709,13 +709,6 @@ paths:
           required: true
           schema:
             $ref: "#/definitions/RuleSave"
-  # migration
-  /migration:
-    post:
-      x-swagger-router-controller: "migration"
-      responses:
-        200:
-          description: successful response
 
 definitions:
 
