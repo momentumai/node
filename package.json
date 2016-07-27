@@ -40,5 +40,8 @@
     "universal-analytics": "0.3.11",
     "yamljs": "0.2.4",
     "winston": "2.2.0"
+  },
+  "devDependencies": {
+    "eslint": "3.0.1"
   }
 }
