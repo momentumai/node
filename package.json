@@ -19,6 +19,7 @@
     "bcrypt": "0.8.5",
     "bignum": "0.11.0",
     "bluebird": "3.0.5",
+    "cheerio": "0.20.0",
     "currency-symbol-map": "3.0.0",
     "debug": "2.2.0",
     "express": "4.14.0",
@@ -38,8 +39,8 @@
     "swagger": "0.7.5",
     "swagger-node-runner": "0.6.16",
     "universal-analytics": "0.3.11",
-    "yamljs": "0.2.4",
-    "winston": "2.2.0"
+    "winston": "2.2.0",
+    "yamljs": "0.2.4"
   },
   "devDependencies": {
     "eslint": "3.0.1"
