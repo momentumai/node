@@ -12,7 +12,7 @@ dependencies:
     - unzip -q -d $HOME $HOME/google_appengine_1.9.30.zip
     # Retrieve our secrets from the CircleCI environment
     - echo $CLIENT_SECRET | base64 --decode > ${HOME}/client-secret.json
-    - echo $PROD_CONFIG | base64 --decode > ${HOME}/node_modules/@config/prod.config.json
+    - echo $PROD_CONFIG | base64 --decode > ./node_modules/@config/prod.config.json
     # Make sure gcloud is up to date
     - gcloud --quiet components update app
     # authenticate gcloud
