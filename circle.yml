@@ -23,4 +23,4 @@ deployment:
     staging:
         branch: master
         commands:
-        - gcloud app deploy node-api.yaml --no-promote
+        - gcloud preview app deploy node-api.yaml --no-promote
