@@ -7,7 +7,7 @@
     "node": "4.3.2"
   },
   "scripts": {
-    "test": "eslint .",
+    "test": "",
     "start": "node $NODE_DEBUG_OPTION index.js"
   },
   "author": "",
