@@ -1,3 +1,8 @@
+general:
+  branches:
+    only:
+      - dev
+
 machine:
   node:
     version: 4.3.2
@@ -23,4 +28,4 @@ deployment:
     staging:
         branch: dev
         commands:
-        - gcloud app deploy node-api.yaml --no-promote
+        - gcloud app deploy node-api.yaml --no-promote --version stage
