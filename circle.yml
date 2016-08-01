@@ -28,4 +28,4 @@ deployment:
     staging:
         branch: dev
         commands:
-        - gcloud app deploy node-api.yaml --no-promote --version stage
+          - gcloud app deploy node-api.yaml --no-promote --version stage
