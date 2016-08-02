@@ -32,3 +32,6 @@ deployment:
           - gcloud preview app deploy node-api.yaml --quiet --version $api_version --no-promote
           - git clone -b dev git@github.com:momentumai/static.git
           - cd ./static
+          - cat <<EOF > ./config/version.config.json
+          - {"endpoint": "https://${api_version}-dot-node-api-dot-momentum-ai.appspot.com/api/"}
+          - EOF
