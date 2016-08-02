@@ -2,7 +2,6 @@ general:
   branches:
     only:
       - dev
-      - master
 
 machine:
   node:
@@ -30,7 +29,4 @@ deployment:
         branch: dev
         commands:
           - ./bin/deploy_staging.sh
-    production:
-        branch: master
-        commands:
-          - ./bin/deploy_production.sh
+          
