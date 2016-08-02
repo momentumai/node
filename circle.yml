@@ -28,4 +28,12 @@ deployment:
     staging:
         branch: dev
         commands:
-          - gcloud preview app deploy node-api.yaml --quiet --version stage --no-promote
+          - api_version=`date '+%Y%m%dT%H%M%S'`
+          - gcloud preview app deploy node-api.yaml --quiet --version $api_version --no-promote
+          - git clone -b dev git@github.com:momentumai/static.git
+          - cd ./static
+          - echo "{\"endpoint\": \"https://${api_version}-dot-node-api-dot-momentum-ai.appspot.com/api/\"}" > ./config/version.config.json
+          - git add ./config/version.config.json
+          - git commit -m "Switched to version $api_version"
+          - git push origin dev
+          - cd ..
