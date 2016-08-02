@@ -1,7 +1,7 @@
 general:
   branches:
     only:
-      - dev
+      - master
 
 machine:
   node:
@@ -26,7 +26,6 @@ dependencies:
 
 deployment:
     staging:
-        branch: dev
+        branch: master
         commands:
           - ./bin/deploy_staging.sh
-          
