@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 MOMENTUM_VERSION=`date '+%Y%m%dt%H%M%S'`
+cd ..
 gcloud preview app deploy node-api.yaml --quiet --version $MOMENTUM_VERSION --no-promote
 git clone -b dev git@github.com:momentumai/static.git
 cd ./static
@@ -10,4 +11,3 @@ EOF
 git add ./config/version.config.json
 git commit -m "Switched to version $MOMENTUM_VERSION"
 git push origin dev
-cd ..
