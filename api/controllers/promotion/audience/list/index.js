@@ -4,7 +4,7 @@ var logger = require('@lib/logger')('promotion/audience/list'),
 
 function handler (event, context) {
     dashboardHandler(event, context, logger, function (local) {
-        return auidenceModel.list(
+        return auidenceModel.listObject(
             local.session.team_id,
             event.ad_account
         );
