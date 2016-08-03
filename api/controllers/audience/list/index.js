@@ -4,7 +4,10 @@ var logger = require('@lib/logger')('/audience/list'),
 
 function handler (event, context) {
     dashboardHandler(event, context, logger, function (local) {
-        return audienceModel.list(local.session.team_id);
+        return audienceModel.list(
+            local.session.team_id,
+            event.ad_account
+        );
     });
 }
 

@@ -721,7 +721,7 @@ paths:
           name: body
           required: true
           schema:
-            $ref: "#/definitions/SessionId"
+            $ref: "#/definitions/AudienceList"
   /audience/save:
     post:
       x-swagger-router-controller: "audience/save"
@@ -1109,6 +1109,14 @@ definitions:
       - ad_account
       - name
       - data
+  AudienceList:
+    properties:
+      session_id:
+        type: string
+      ad_account:
+        type: string
+    required:
+      - session_id
   # global
   SessionId:
     properties:
