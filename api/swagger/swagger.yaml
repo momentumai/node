@@ -1098,12 +1098,15 @@ definitions:
         type: string
       id:
         type: string
+      ad_account:
+        type: string
       name:
         type: string
       data:
         type: object
     required:
       - session_id
+      - ad_account
       - name
       - data
   # global
