@@ -7,6 +7,7 @@ function handler (event, context) {
         return audienceModel.save(
             local.session.team_id,
             event.id,
+            event.ad_account,
             event.name,
             event.data
         );
