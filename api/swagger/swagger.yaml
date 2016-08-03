@@ -709,6 +709,31 @@ paths:
           required: true
           schema:
             $ref: "#/definitions/RuleSave"
+  # rules
+  /audience/list:
+    post:
+      x-swagger-router-controller: "audience/list"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/SessionId"
+  /audience/save:
+    post:
+      x-swagger-router-controller: "audience/save"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/AudienceSave"
 
 definitions:
 
@@ -1066,6 +1091,20 @@ definitions:
         type: object
     required:
       - session_id
+      - data
+  AudienceSave:
+    properties:
+      session_id:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      data:
+        type: object
+    required:
+      - session_id
+      - name
       - data
   # global
   SessionId:
