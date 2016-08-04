@@ -9,8 +9,8 @@ function handler (event, context) {
             event.id,
             event.ad_account,
             event.name,
-            event.data,
-            event.meta
+            event.data || {},
+            event.meta || {}
         );
     });
 }
