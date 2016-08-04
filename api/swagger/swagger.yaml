@@ -1104,6 +1104,8 @@ definitions:
         type: string
       data:
         type: object
+      meta:
+        type: object
     required:
       - session_id
       - ad_account
