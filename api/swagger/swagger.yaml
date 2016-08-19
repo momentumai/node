@@ -514,6 +514,18 @@ paths:
           required: true
           schema:
             $ref: "#/definitions/CampaignList"
+  /promotion/campaign/save:
+    post:
+      x-swagger-router-controller: "promotion/campaign/save"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/CampaignSave"
   /promotion/audience/list:
     post:
       x-swagger-router-controller: "promotion/audience/list"
@@ -1014,6 +1026,21 @@ definitions:
         type: integer
     required:
       - session_id
+  CampaignSave:
+    properties:
+      session_id:
+        type: string
+      campaign_id:
+        type: integer
+      budget:
+        type: integer
+      end_time:
+        type: integer
+    required:
+      - session_id
+      - campaign_id
+      - budget
+      - end_time
   CampaignBase:
     properties:
       session_id:
