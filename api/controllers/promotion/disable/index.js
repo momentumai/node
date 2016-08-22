@@ -8,6 +8,7 @@ function handler (event, context) {
             local.session.team_id,
             event.campaign_id,
             local.fb,
+            local.now,
             pool
         );
     });
