@@ -1,11 +1,12 @@
 var logger = require('@lib/logger')('/worker/rules'),
     resources = require('@lib/resources'),
-    rulesModel = require('@lib/worker/rules/handler');
+    rulesModel = require('@lib/worker/rules/handler'),
+    config = require('@config');
 
 function handler (event, context) {
     var local = {};
 
-    if (event.access_token !== 'IybD5lP?;:[}gH^PT(z}h\'I!EfMN') {
+    if (event.access_token !== config.workerToken) {
         return context.succeed({});
     }
 
