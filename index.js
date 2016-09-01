@@ -9,7 +9,7 @@ var Promise = require('bluebird'),
     morgan = require('morgan'),
     app = express(),
     lambdaToExpress = require('./lambda_to_express'),
-    PROJECTS = ['api', 'worker'];
+    PROJECTS = ['api'];
 
 function loadProjects (projects) {
     var promises = {};
