@@ -11,6 +11,20 @@ produces:
   - application/json
 paths:
 
+  # worker
+  /worker/rules:
+    post:
+      x-swagger-router-controller: "worker/rules"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/WRules"  
+
   # demo
   /demo:
     post:
@@ -901,6 +915,25 @@ definitions:
       - email
       - token
       - password
+
+  # worker
+  WRules:
+    properties:
+      team_id:
+        type: string
+      rules:
+        type: array
+        items:
+          type: object
+      timestamp:
+        type: integer
+      access_token:
+        type: string
+    required:
+      - team_id
+      - rules
+      - timestamp
+      - access_token
 
   # alert
   ListAlert:

@@ -1,9 +1,0 @@
-service: node-worker
-runtime: nodejs
-vm: true
-
-beta_settings:
-  cloud_sql_instances: "momentum-ai:us-central1:momentum-1"
-
-skip_files:
-  - ^.*node_modules/[^@].*$
