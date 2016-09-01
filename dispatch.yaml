@@ -2,8 +2,5 @@ dispatch:
   - url: "*/api/*"
     module: node-api
 
-  - url: "*/worker/*"
-    module: node-worker
-
   - url: "momentum-ai.appspot.com/"
     module: default
