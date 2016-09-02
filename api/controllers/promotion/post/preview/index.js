@@ -6,6 +6,7 @@ function handler (event, context) {
     dashboardHandler(event, context, logger, function (local, pool) {
         return postModel.preview(
             local.session.team_id,
+            local.session.user_id,
             event.content_id,
             pool,
             event.settings,
