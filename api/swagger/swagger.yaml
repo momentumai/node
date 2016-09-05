@@ -380,7 +380,7 @@ paths:
           name: body
           required: true
           schema:
-            $ref: "#/definitions/SetNotif"
+            $ref: "#/definitions/FetchNotif"
 
   # alert
   /alert/list:
@@ -952,6 +952,15 @@ definitions:
       - token
       - password
   SetNotif:
+    properties:
+      session_id:
+        type: string
+      endpoint:
+        type: string
+    required:
+      - session_id
+      - endpoint
+  FetchNotif:
     properties:
       session_id:
         type: string
