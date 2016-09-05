@@ -23,7 +23,7 @@ paths:
           name: body
           required: true
           schema:
-            $ref: "#/definitions/WRules"  
+            $ref: "#/definitions/WRules"
 
   # demo
   /demo:
@@ -1231,4 +1231,3 @@ definitions:
         type: string
     required:
       - session_id
-
