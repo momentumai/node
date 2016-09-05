@@ -4,7 +4,7 @@ var logger = require('@lib/logger')('auth/user/data/set'),
 
 function handler (event, context) {
     dashboardHandler(event, context, logger, function (local) {
-        return notifModel.add(
+        return notifModel.addToken(
             local.session.user_id,
             event.endpoint
         );
