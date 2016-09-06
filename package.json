@@ -32,6 +32,7 @@
     "memcached": "2.2.2",
     "morgan": "1.7.0",
     "mysql": "2.9.0",
+    "node-gcm": "^0.14.4",
     "node-rules": "3.0.3",
     "parse-domain": "0.2.0",
     "request": "2.64.0",
@@ -39,6 +40,7 @@
     "swagger": "0.7.5",
     "swagger-node-runner": "0.6.16",
     "universal-analytics": "0.3.11",
+    "uuid": "^2.0.2",
     "winston": "2.2.0",
     "yamljs": "0.2.4"
   },
