@@ -23,7 +23,7 @@ paths:
           name: body
           required: true
           schema:
-            $ref: "#/definitions/WRules"  
+            $ref: "#/definitions/WRules"
 
   # demo
   /demo:
@@ -356,6 +356,32 @@ paths:
           schema:
             $ref: "#/definitions/SessionId"
 
+  /auth/user/notif/set:
+    post:
+      x-swagger-router-controller: "auth/user/notif/set"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/SetNotif"
+
+  /auth/user/notif/fetch:
+    post:
+      x-swagger-router-controller: "auth/user/notif/fetch"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/FetchNotif"
+
   # alert
   /alert/list:
     post:
@@ -679,6 +705,16 @@ definitions:
     required:
       - url
 
+  # test
+  Test:
+    properties:
+      session_id:
+        type: string
+      data:
+        type: object
+    required:
+      - session_id
+
   # dashboard
   PostUrl:
     properties:
@@ -819,6 +855,24 @@ definitions:
       - email
       - token
       - password
+  SetNotif:
+    properties:
+      session_id:
+        type: string
+      endpoint:
+        type: string
+    required:
+      - session_id
+      - endpoint
+  FetchNotif:
+    properties:
+      session_id:
+        type: string
+      endpoint:
+        type: string
+    required:
+      - session_id
+      - endpoint
 
   # worker
   WRules:
@@ -1025,4 +1079,3 @@ definitions:
         type: string
     required:
       - session_id
-
