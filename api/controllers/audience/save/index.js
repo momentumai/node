@@ -5,7 +5,7 @@ var logger = require('@lib/logger')('/audience/save'),
 function handler (event, context) {
     dashboardHandler(event, context, logger, function (local) {
         return audienceModel.save(
-            local.session.team_id,
+            local.session,
             event.id,
             event.ad_account,
             event.name,
