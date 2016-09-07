@@ -11,11 +11,12 @@
         "to": 1460628060,
         "conversion": 30,
         "click": 27,
-        "landing": 1.1111111111111112,
+        "landing": 1.11,
         "lift": 1,
-        "cpa": 0.13066666666666665,
+        "cpa": 0.13,
         "spent": 0,
-        "spend": 3.92
+        "spend": 3.92,
+        "adset": {}
     }],
     "cnt": 1,
     "sum": 1,
