@@ -5,12 +5,7 @@ var logger = require('@lib/logger')('/test'),
 function handler (event, context) {
     dashboardHandler(event, context, logger, function (local) {
         console.log(local);
-        return model.addGet(
-            local.session.team_id,
-            local.cats,
-            event.data.ad_account,
-            local.fb.token
-        );
+        return model.addGet(event.data, local.fb.token);
     });
 }
 
