@@ -703,6 +703,31 @@ paths:
           required: true
           schema:
             $ref: "#/definitions/AudienceSave"
+  /experiment/create:
+    post:
+      x-swagger-router-controller: "experiment/create"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/ExperimentCreate"
+  /experiment/list:
+    post:
+      x-swagger-router-controller: "experiment/list"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/ExperimentList"
+
 
 definitions:
 
@@ -1085,6 +1110,30 @@ definitions:
         type: string
     required:
       - session_id
+
+  ExperimentCreate:
+    properties:
+      session_id:
+        type: string
+      data:
+        type: object
+    required:
+      - session_id
+      - data
+
+  ExperimentList:
+    properties:
+      session_id:
+        type: string
+      limit:
+        type: integer
+      offset:
+        type: string
+      content_id:
+        type: string
+    required:
+      - session_id
+
   # global
   SessionId:
     properties:
