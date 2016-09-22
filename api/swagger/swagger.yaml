@@ -727,6 +727,18 @@ paths:
           required: true
           schema:
             $ref: "#/definitions/ExperimentList"
+  /experiment/get:
+    post:
+      x-swagger-router-controller: "experiment/get"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/ExperimentGet"
 
 
 definitions:
@@ -1129,10 +1141,18 @@ definitions:
         type: integer
       offset:
         type: string
+    required:
+      - session_id
+
+  ExperimentGet:
+    properties:
+      session_id:
+        type: string
       content_id:
         type: string
     required:
       - session_id
+      - content_id
 
   # global
   SessionId:
