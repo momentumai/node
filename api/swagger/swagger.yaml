@@ -739,6 +739,18 @@ paths:
           required: true
           schema:
             $ref: "#/definitions/ExperimentGet"
+  /experiment/edit:
+    post:
+      x-swagger-router-controller: "experiment/edit"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/ExperimentEdit"
   /content/info:
     post:
       x-swagger-router-controller: "content/info"
@@ -1164,6 +1176,19 @@ definitions:
     required:
       - session_id
       - content_id
+
+  ExperimentEdit:
+    properties:
+      session_id:
+        type: string
+      content_id:
+        type: string
+      data:
+        type: object
+    required:
+      - session_id
+      - content_id
+      - data
 
   ContentInfoGet:
     properties:
