@@ -25,6 +25,19 @@ paths:
           schema:
             $ref: "#/definitions/WRules"
 
+  # test
+  /test:
+    post:
+      x-swagger-router-controller: "test"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/Test"
   # demo
   /demo:
     post:
@@ -690,6 +703,90 @@ paths:
           required: true
           schema:
             $ref: "#/definitions/AudienceSave"
+  /experiment/create:
+    post:
+      x-swagger-router-controller: "experiment/create"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/ExperimentCreate"
+  /experiment/list:
+    post:
+      x-swagger-router-controller: "experiment/list"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/ExperimentList"
+  /experiment/get:
+    post:
+      x-swagger-router-controller: "experiment/get"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/ExperimentGet"
+  /experiment/edit:
+    post:
+      x-swagger-router-controller: "experiment/edit"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/ExperimentEdit"
+  /experiment/test/edit:
+    post:
+      x-swagger-router-controller: "experiment/test/edit"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/ExperimentTestEdit"
+  /experiment/test/clone:
+    post:
+      x-swagger-router-controller: "experiment/test/clone"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/ExperimentTestClone"
+  /content/info:
+    post:
+      x-swagger-router-controller: "content/info"
+      responses:
+        200:
+          description: successful response
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/ContentInfoGet"
 
 definitions:
 
@@ -1072,6 +1169,84 @@ definitions:
         type: string
     required:
       - session_id
+
+  ExperimentCreate:
+    properties:
+      session_id:
+        type: string
+      data:
+        type: object
+    required:
+      - session_id
+      - data
+
+  ExperimentList:
+    properties:
+      session_id:
+        type: string
+      limit:
+        type: integer
+      offset:
+        type: string
+    required:
+      - session_id
+
+  ExperimentGet:
+    properties:
+      session_id:
+        type: string
+      content_id:
+        type: string
+    required:
+      - session_id
+      - content_id
+
+  ExperimentEdit:
+    properties:
+      session_id:
+        type: string
+      content_id:
+        type: string
+      data:
+        type: object
+    required:
+      - session_id
+      - content_id
+      - data
+
+  ExperimentTestEdit:
+    properties:
+      session_id:
+        type: string
+      id:
+        type: string
+      data:
+        type: object
+    required:
+      - session_id
+      - id
+      - data
+
+  ExperimentTestClone:
+    properties:
+      session_id:
+        type: string
+      id:
+        type: string
+    required:
+      - session_id
+      - id
+
+  ContentInfoGet:
+    properties:
+      session_id:
+        type: string
+      content_id:
+        type: string
+    required:
+      - session_id
+      - content_id
+
   # global
   SessionId:
     properties:
